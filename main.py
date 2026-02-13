@@ -56,6 +56,7 @@ def health_check():
     return {"status": "API running"}
 
 @app.post("/search")
+@app.get("/search")
 def semantic_search(req: SearchRequest):
 
     start = time.time()
