@@ -51,9 +51,10 @@ def rerank(query, docs):
     results.sort(key=lambda x: x["score"], reverse=True)
     return results
 
-# ---------------------------
-# Search endpoint
-# ---------------------------
+@app.get("/")
+def health_check():
+    return {"status": "API running"}
+
 @app.post("/search")
 def semantic_search(req: SearchRequest):
 
