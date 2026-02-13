@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+cohere
+faiss-cpu
+numpy
+python-dotenv
